@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Calculadora dolares a pesos en tiendas online</title>
+    <style>
+      body {
+        background:url(https://img.freepik.com/vector-gratis/fondo-vector-verde-oscuro-signos-dolares-ilustracion-abstracta-geometrica-moderna-simbolos-bancarios-eps_505557-2391.jpg?w=740);
+        background-size:768px 700px;
+        background-position: 1% 1%;
+        background-repeat:no-repeat;
+        /*height:10vh;*/
+      }
+      </style>
+  </head>
+  <body>
+    <div class="div1" id="div1" style="width:768px; height:1366px;text-align:center">
+      <h1>CALCULADORA DE COMPRA DE JUEGOS EN VALOR DOLARES</h1>
+      <img src="carrito.png" width="450" height="150">
+      <p style="font-size:28px"> - Ingresa el valor en dolares del producto que deseas comprar</p>
+      <p style="font-size:28px"> - Ingresa el valor en la tienda/consola que deseas realizar la compra</p>
+      <p><br></p>
+      <p style="font-size:26px"><strong>PLAYSTATION / XBOX:</strong>
+      <input style= "width:135px; height:22px; border:2px solid" type="number" name="playstation" id="play">
+      <input type="button" name="enviar" id="btnp" value="Pulsar"></p>
+      <p style="font-size:26px"><strong>GOOGLE STORE:</strong>
+      <input style= "width:150px; height:22px; border:2px solid; border-radius:2px" type="number" name="google" id="goo">
+      <input type="button" name="enviar" id="btngoo" value="Pulsar"></p>
+      <p style="text-align:center; font-size:30px"><font color="red"><strong>EL PRODUCTO TE SALDRA:</strong></font></p>
+      <p style="text-align:center; font-size:65px; color:blue; font-weight:bold" id="resultado"></p>
+
+    </div>
+    <script src="calcu.js" charset="utf-8"></script>
+  </body>
+</html>
