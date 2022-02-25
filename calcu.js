@@ -24,7 +24,7 @@ var rtexto=document.getElementById('resultado');
 
 function calculadorp() {
   can=parseInt(valorp.value);
-  resul=(tation.usd+tation.iva+tation.pais+tation.gan)*can;
+  resul=parseInt(tation.usd+tation.iva+tation.pais+tation.gan)*can;
   rtexto.innerHTML="*** $ "+resul+" PESOS ***";
 
 }
