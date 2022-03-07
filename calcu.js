@@ -1,36 +1,56 @@
-var tation= {
-  usd:112,
-  iva:112*0.21,
-  pais:112*0.08,
-  gan:112*0.35
-};
-
-var storeGoo= {
-  usd:112,
-  iva:112*0.21,
-  pais:112*0.30,
-  gan:112*0.35
-};
+class calculadorDolar {
+  constructor(iv,imp1,imp2) {
+    this.iva=iv;
+    this.pais=imp1;
+    this.ganancia=imp2;
+  }
+}
 
 
+var valor=document.getElementById('texto'); // traigo el campo
+var boton=document.getElementById('btnp'); // traigo el boton
+var selec=document.querySelector('select'); // traigo la eleccion
+var rhtml=document.getElementById('resultado'); // traigo el <p></p> parrafo donde pondre el resultado futuro
 
-var valorp=document.getElementById('play');
-var valorg=document.getElementById('goo');
-var botonp=document.getElementById('btnp');
-var botong=document.getElementById('btngoo');
-botonp.addEventListener('click',calculadorp);
-botong.addEventListener('click',calculadorg);
-var rtexto=document.getElementById('resultado');
 
-function calculadorp() {
+var dolar=112;
+
+
+
+var tation= new calculadorDolar(0.21,0.08,0.35);
+var storeGoo= new calculadorDolar(0.21,0.30,0.35);
+
+boton.addEventListener('click',calcular);
+
+
+function calcular(){
+  elec=selec.value; // extraigo el valor del objeto selec q antes habia traido desde select
+  var resuliva;
+  var resultado;
+  can=parseFloat(valor.value);
+  switch (elec) {
+    case 'play':
+      resuliva=can+(can*tation.iva);
+      resultado=parseInt((resuliva*(tation.pais+tation.ganancia)+resuliva)*dolar);
+      rhtml.innerHTML="*** $ "+resultado+" PESOS ***";
+      break;
+    case 'xbox':
+      resuliva=can+(can*tation.iva);
+      resultado=parseInt((resuliva*(tation.pais+tation.ganancia)+resuliva)*dolar);
+      rhtml.textContent="*** $ "+resultado+" PESOS ***";
+      break;
+    case 'goo':
+      resuliva=can+(can*storeGoo.iva);
+      resultado=parseInt((resuliva*(storeGoo.pais+storeGoo.ganancia)+resuliva)*dolar);
+      rhtml.innerHTML="*** $ "+resultado+" PESOS ***";
+      break;
+    default:
+      alert("ERROR GRAVE!!! ELIJA UNA OPCION");
+  }
+}
+
+/*function calcularp() {
   can=parseInt(valorp.value);
-  resul=parseInt(tation.usd+tation.iva+tation.pais+tation.gan)*can;
-  rtexto.innerHTML="*** $ "+resul+" PESOS ***";
-
-}
-function calculadorg() {
-  can=parseInt(valorg.value);
-  resul=parseInt((storeGoo.usd+storeGoo.iva+storeGoo.pais+storeGoo.gan)*can);
-  rtexto.innerHTML="*** $ "+resul+" PESOS ***";
-
-}
+  resultado=parseInt((tation.dolar+tation.iva+tation.pais+tation.ganancia)*can);
+  rhtml.innerHTML="*** $ "+resultado+" PESOS ***";
+}*/

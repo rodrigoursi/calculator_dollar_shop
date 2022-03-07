@@ -17,15 +17,18 @@
     <div class="div1" id="div1" style="width:768px; height:1366px;text-align:center">
       <h1>CALCULADORA DE COMPRA DE JUEGOS EN VALOR DOLARES</h1>
       <img src="carrito.png" width="450" height="150">
-      <p style="font-size:28px"> - Ingresa el valor en dolares del producto que deseas comprar</p>
-      <p style="font-size:28px"> - Ingresa el valor en la tienda/consola que deseas realizar la compra</p>
+      <p style="font-size:28px"> - Elije en que tienda o consola realizaras la compra</p>
+      <p style="font-size:28px"> - Luego ingresa el valor en dolares de la compra que deseas realizar</p>
       <p><br></p>
-      <p style="font-size:26px"><strong>PLAYSTATION / XBOX:</strong>
-      <input style= "width:135px; height:22px; border:2px solid" type="number" name="playstation" id="play">
+      <p style="font-size:26px">
+        <select name="select" id="select">
+        <option value="elije">Elije una opcion</option>
+        <option value="play">PLAYSTATION</option>
+        <option value="xbox">XBOX</option>
+        <option value="goo">GOOGLE STORE</option>
+        </select>
+      <input style= "width:135px; height:22px; border:2px solid" type="number" name="texto" id="texto">
       <input type="button" name="enviar" id="btnp" value="Pulsar"></p>
-      <p style="font-size:26px"><strong>GOOGLE STORE:</strong>
-      <input style= "width:150px; height:22px; border:2px solid; border-radius:2px" type="number" name="google" id="goo">
-      <input type="button" name="enviar" id="btngoo" value="Pulsar"></p>
       <p style="text-align:center; font-size:30px"><font color="red"><strong>EL PRODUCTO TE SALDRA:</strong></font></p>
       <p style="text-align:center; font-size:65px; color:blue; font-weight:bold" id="resultado"></p>
 
