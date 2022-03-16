@@ -13,8 +13,6 @@ var selec=document.querySelector('select'); // traigo la eleccion
 var rhtml=document.getElementById('resultado'); // traigo el <p></p> parrafo donde pondre el resultado futuro
 
 
-var dolar=112;
-
 
 
 var tation= new calculadorDolar(0.21,0.08,0.35);
