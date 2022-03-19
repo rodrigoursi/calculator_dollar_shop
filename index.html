@@ -3,22 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>Calculadora dolares a pesos en tiendas online</title>
-    <style>
-      body {
-        background:url(https://img.freepik.com/vector-gratis/fondo-vector-verde-oscuro-signos-dolares-ilustracion-abstracta-geometrica-moderna-simbolos-bancarios-eps_505557-2391.jpg?w=740);
-        background-size:768px 700px;
-        background-position: 1% 1%;
-        background-repeat:no-repeat;
-        /*height:10vh;*/
-      }
-      </style>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div class="div1" id="div1" style="width:768px; height:1366px;text-align:center">
+    <div class="divc1" id="div1">
       <h1>CALCULADORA DE COMPRA DE JUEGOS EN VALOR DOLARES</h1>
       <img src="carrito.png" width="450" height="150">
-      <p style="font-size:28px"> - Elije en que tienda o consola realizaras la compra</p>
-      <p style="font-size:28px"> - Luego ingresa el valor en dolares de la compra que deseas realizar</p>
+      <p class="p1"> - Elije en que tienda o consola realizaras la compra</p>
+      <p class="p1"> - Luego ingresa el valor en dolares de la compra que deseas realizar</p>
       <p><br></p>
       <p style="font-size:26px">
         <select name="select" id="select">
@@ -27,11 +19,10 @@
         <option value="xbox">XBOX</option>
         <option value="goo">GOOGLE STORE</option>
         </select>
-      <input style= "width:135px; height:22px; border:2px solid" type="number" name="texto" id="texto">
+      <input type="number" name="texto" id="texto">
       <input type="button" name="enviar" id="btnp" value="Pulsar"></p>
-      <p style="text-align:center; font-size:30px"><font color="red"><strong>EL PRODUCTO TE SALDRA:</strong></font></p>
-      <p style="text-align:center; font-size:65px; color:blue; font-weight:bold" id="resultado"></p>
-
+      <p class="p2"><strong>EL PRODUCTO TE SALDRA:</strong></p>
+      <p id="resultado"></p>
     </div>
     <script src="dolarApi.js" charset="utf-8"></script>
     <script src="calcu.js" charset="utf-8"></script>
