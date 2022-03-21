@@ -36,5 +36,8 @@ body{
 
 #resultado {
   text-align:center; font-size:65px; color:blue; font-weight:bold;
-  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;  /* CON ESTO RELENTIZO CUANLQUIER SALTO DENTRO DE LA PAGINA */
 }
