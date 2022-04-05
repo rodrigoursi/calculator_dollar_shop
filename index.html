@@ -7,22 +7,24 @@
   </head>
   <body>
     <div class="divc1" id="div1">
-      <h1>CALCULADORA DE COMPRA DE JUEGOS EN VALOR DOLARES</h1>
-      <img src="carrito.png" width="450" height="150">
-      <p class="p1"> - Elije en que tienda o consola realizaras la compra</p>
-      <p class="p1"> - Luego ingresa el valor en dolares de la compra que deseas realizar</p>
-      <p><br></p>
-      <p style="font-size:26px">
-        <select name="select" id="select">
-        <option value="elije">Elije una opcion</option>
-        <option value="play">PLAYSTATION</option>
-        <option value="xbox">XBOX</option>
-        <option value="goo">GOOGLE STORE</option>
-        </select>
-      <input type="number" name="texto" id="texto">
-      <a  href="#resultado"> <input type="button" name="enviar" id="btnp" value="Pulsar"></p></a>
-      <p class="p2"><strong>EL PRODUCTO TE SALDRA:</strong></p>
-      <p id="resultado"></p>
+      <div class="divc2" id="div2">
+        <h1>CALCULADORA DE COMPRA DE JUEGOS EN VALOR DOLARES</h1>
+        <img src="carrito.png" width="450" height="150">
+          <ol class="ol">
+            <li class= "li1">Elije en que tienda o consola realizaras la compra</li>
+            <li class= "li2">Luego ingresa el valor en dolares de la compra que deseas realizar</li>
+          </ol>
+        <p class= "p1">
+          <select name="select" id="select">
+          <option value="elije">Elije una opcion</option>
+          <option value="play">PLAYSTATION</option>
+          <option value="xbox">XBOX</option>
+          <option value="goo">GOOGLE STORE</option>
+          </select>
+          <input type="number" name="texto" id="texto">
+          <a  href="#resultado"> <input type="button" name="enviar" id="btnp" value="Pulsar"></p></a>
+        <p class="p2"><strong>EL PRODUCTO TE SALDRA:</strong></p>
+        <p id="resultado"></p>
     </div>
     <script src="dolarApi.js" charset="utf-8"></script>
     <script src="calcu.js" charset="utf-8"></script>
