@@ -18,7 +18,7 @@ var p2=document.querySelector('.p2');
 
 var tation= new calculadorDolar(0.21,0.08,0.45);
 var storeGoo= new calculadorDolar(0.21,0.30,0.45);
-
+var dolar = 133;
 boton.addEventListener('click',calcular);
 
 
