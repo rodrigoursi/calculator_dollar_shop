@@ -8,3 +8,13 @@ fetch(url).then(response => response.json()).then(usd=>{
   console.log(dolar);
 });
 */ //// COMENTADO PORQ LA API NO ANDA
+
+const url= "https://mercados.ambito.com/dolar/%22+tipo+%22/variacion";
+var usd;
+var dolar;
+
+fetch(url).then(response => response.json()).then(usd=>{
+
+  dolar=parseFloat(usd.venta.replace(",", "."));
+  console.log(dolar);
+});
