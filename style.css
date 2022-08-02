@@ -2,14 +2,32 @@ body{
   background:url(https://img.freepik.com/vector-gratis/fondo-vector-verde-oscuro-signos-dolares-ilustracion-abstracta-geometrica-moderna-simbolos-bancarios-eps_505557-2391.jpg?w=740);
   background-size:100%;
   background-repeat:no-repeat;
-  background-position: 0px -200px;
-
-  /*height:10vh;*/
+  background-position: 0px -250px;
+  margin:0;
+  /*max-height:100vh;*/
+  position:relative;
+  /*width:1280px; height:720px;*/
 }
 
+.footer {
+  /*margin:0;*/
+}
 .divc1 {
   margin: auto;
-  width:768px; height:1366px;text-align:center;
+  text-align: center;
+  /*width:1280px; height:640px;text-align:center;*/
+}
+
+footer {
+  background-color:rgb(19, 181, 229);
+  width:100%;
+  text-align:center;
+  height:2.5em;
+  /*position:relative;*/
+  bottom:0;
+  /*line-height:normal;
+  vertical-align:middle;
+  position:fixed;*/
 }
 
 .divc2 {
@@ -18,7 +36,11 @@ body{
   background:rgba(0, 0, 0, 0.022);
 }
 
-.ol li {
+img {
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+.ol {
   font-size:26px;
   text-align:left;
 }
@@ -48,13 +70,41 @@ body{
 .p2 {
   text-align:center; font-size:30px;
   color:red;
+  padding: 15px 0;
 
 }
 
-#resultado {
+.p2 p {
   text-align:center; font-size:65px; color:blue; font-weight:bold;
+  margin:20px auto;
 }
 
 html {
   scroll-behavior: smooth;  /* CON ESTO RELENTIZO CUANLQUIER SALTO DENTRO DE LA PAGINA */
+}
+
+@media (max-width: 580px) {
+  body {
+    background-size: auto;
+    width: 100%;
+  }
+  h1 {
+    font-size: small;
+    text-align: center;
+  }
+  img {
+    width: 60%;
+  }
+  .ol {
+    font-size: 0.70em;
+    padding-left: 10px;
+  }
+  .p2 p {
+    width: 100%;
+    text-align:center; font-size:1em; color:blue; font-weight:bold;
+  }
+  .p2 {
+    width: 100%;
+    font-size:1.2em;
+  }
 }

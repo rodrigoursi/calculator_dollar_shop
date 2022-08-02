@@ -10,13 +10,14 @@ class calculadorDolar {
 var valor=document.getElementById('texto'); // traigo el campo
 var boton=document.getElementById('btnp'); // traigo el boton
 var selec=document.querySelector('select'); // traigo la eleccion
-var rhtml=document.getElementById('resultado'); // traigo el <p></p> parrafo donde pondre el resultado futuro
+//var rhtml=document.getElementById('resultado'); // traigo el <p></p> parrafo donde pondre el resultado futuro
+var rhtml=document.createElement('p');
+var p2=document.querySelector('.p2');
 
 
 
-
-var tation= new calculadorDolar(0.21,0.08,0.35);
-var storeGoo= new calculadorDolar(0.21,0.30,0.35);
+var tation= new calculadorDolar(0.21,0.08,0.45);
+var storeGoo= new calculadorDolar(0.21,0.30,0.45);
 
 boton.addEventListener('click',calcular);
 
@@ -31,16 +32,19 @@ function calcular(){
       resuliva=can+(can*tation.iva);
       resultado=parseInt((resuliva*(tation.pais+tation.ganancia)+resuliva)*dolar);
       rhtml.innerHTML="*** $ "+resultado+" PESOS ***";
+      p2.appendChild(rhtml);
       break;
     case 'xbox':
       resuliva=can+(can*tation.iva);
       resultado=parseInt((resuliva*(tation.pais+tation.ganancia)+resuliva)*dolar);
       rhtml.textContent="*** $ "+resultado+" PESOS ***";
+      p2.appendChild(rhtml);
       break;
     case 'goo':
       resuliva=can+(can*storeGoo.iva);
       resultado=parseInt((resuliva*(storeGoo.pais+storeGoo.ganancia)+resuliva)*dolar);
       rhtml.innerHTML="*** $ "+resultado+" PESOS ***";
+      p2.appendChild(rhtml);
       break;
     default:
       alert("ERROR GRAVE!!! ELIJA UNA OPCION");
