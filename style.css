@@ -7,7 +7,8 @@ body{
   background:url(https://img.freepik.com/vector-gratis/fondo-vector-verde-oscuro-signos-dolares-ilustracion-abstracta-geometrica-moderna-simbolos-bancarios-eps_505557-2391.jpg?w=740);
   background-size:100%;
   background-repeat:no-repeat;
-  background-position: 0px -250px;
+  height: 100vh;
+  width: 100vw;
   /*max-height:100vh;*/
   /*position:relative;*/
   /*width:1280px; height:720px;*/
@@ -23,6 +24,7 @@ footer {
 
 .divc2 {
   display:flex;
+
   flex-direction: column;
   border-style: groove;
   border-width:10px;
@@ -83,19 +85,49 @@ html {
 @media (max-width: 580px) {
   body {
     background-size: auto;
-    width: 100%;
   }
+
+  footer {
+    height: 8%;
+  }
+
+  .divc2 {
+    height: 92%;
+    justify-content: space-evenly;
+  }
+
   h1 {
     font-size: small;
     text-align: center;
   }
   img {
     width: 60%;
+    height: 30%;
   }
+
+  .p1 {
+    display: flex;
+    flex-direction: column;
+    height: 30%;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
   .ol {
-    font-size: 0.70em;
+    font-size: 0.9em;
     padding-left: 10px;
+    margin: 5% 0;
   }
+
+  .p1 a {
+    width: 100%;
+  }
+
+  .p1 a input {
+    width: 100%;
+    height: 100%;
+  }
+
   .p2 p {
     width: 100%;
     text-align:center; font-size:1em; color:blue; font-weight:bold;

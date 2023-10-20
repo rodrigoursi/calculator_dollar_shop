@@ -1,8 +1,9 @@
 class calculadorDolar {
-  constructor(iv,imp1,imp2) {
+  constructor(iv,imp1,imp2,imp3) {
     this.iva=iv;
     this.pais=imp1;
     this.ganancia=imp2;
+    this.bienesPersonales=imp3;
   }
 }
 
@@ -16,8 +17,8 @@ var p2=document.querySelector('.p2');
 
 
 
-var tation= new calculadorDolar(0.21,0.08,0.45);
-var storeGoo= new calculadorDolar(0.21,0.30,0.45);
+var tation= new calculadorDolar(0,0.08,0.45,0.25);
+var storeGoo= new calculadorDolar(0.21,0.30,0.45,0.25);
 
 boton.addEventListener('click',calcular);
 
@@ -27,32 +28,10 @@ function calcular(){
   var resuliva;
   var resultado;
   can=parseFloat(valor.value);
-  switch (elec) {
-    case 'play':
-      resuliva=can+(can*tation.iva);
-      resultado=parseInt((resuliva*(tation.pais+tation.ganancia)+resuliva)*dolar);
-      rhtml.innerHTML="*** $ "+resultado+" PESOS ***";
-      p2.appendChild(rhtml);
-      break;
-    case 'xbox':
-      resuliva=can+(can*tation.iva);
-      resultado=parseInt((resuliva*(tation.pais+tation.ganancia)+resuliva)*dolar);
-      rhtml.textContent="*** $ "+resultado+" PESOS ***";
-      p2.appendChild(rhtml);
-      break;
-    case 'goo':
-      resuliva=can+(can*storeGoo.iva);
-      resultado=parseInt((resuliva*(storeGoo.pais+storeGoo.ganancia)+resuliva)*dolar);
-      rhtml.innerHTML="*** $ "+resultado+" PESOS ***";
-      p2.appendChild(rhtml);
-      break;
-    default:
-      alert("ERROR GRAVE!!! ELIJA UNA OPCION");
-  }
-}
-
-/*function calcularp() {
-  can=parseInt(valorp.value);
-  resultado=parseInt((tation.dolar+tation.iva+tation.pais+tation.ganancia)*can);
+  const objCalcu= new calculadorDolar(0,0.30,0.45,0.25);
+  if(elec == 'goo') objCalcu.iva = 0.21;
+  let totalImp = can * (objCalcu.iva + objCalcu.pais + objCalcu.ganancia + objCalcu.bienesPersonales);
+  resultado = parseInt((totalImp + can)*dolar);
   rhtml.innerHTML="*** $ "+resultado+" PESOS ***";
-}*/
+  p2.appendChild(rhtml);
+}
